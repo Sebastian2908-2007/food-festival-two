@@ -1,7 +1,7 @@
 require("bootstrap");
 // requiring our images so we can make them available to webpack
-const img1 = require('../../dist/img/food-table.jpg');
-const img2 = require("../../dist/img/grill.jpg");
+const img1 = require('../../assets/img/food-table.jpg');
+const img2 = require("../../assets/img/grill.jpg");
 
 
 $(document).ready(function() {
