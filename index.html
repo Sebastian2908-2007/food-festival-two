@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Food Festival</title>
+  <!--below code will fix favicon.io error in console although some say every site should have a favicon-->
+  <link rel="shortcut icon" href="#">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/bootstrap.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -169,6 +171,7 @@
 <script>
   (function() {
     if("serviceWorker" in navigator) {
+      // no absolute paths for service worker registration it will break on deploy
       navigator.serviceWorker.register("./service-worker.js")
       .then(() => console.log('Service worker Registered successfully!.'))
       .catch(error => console.log("Service Worker Registration failed :(", error));

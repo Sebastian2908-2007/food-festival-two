@@ -17,6 +17,15 @@ module.exports = {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
     },
+    // the settings for dev server below are essential for running webpack-dev-server
+    devServer: {
+        //....//
+        static: {                               
+          directory: path.join(__dirname, './'),  
+          watch: true
+        }
+     },
+
     module: {
         rules: [
             {
