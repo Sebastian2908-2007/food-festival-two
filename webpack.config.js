@@ -56,9 +56,9 @@ module.exports = {
             $: "jquery",
             jQuery: "jquery"
         }),
-        new BundleAnalyzerPlugin({
+        /*new BundleAnalyzerPlugin({
             analyzerMode: "static", //the report outputs to an HTML file in the dist folder
-        }),
+        }),*/
         new webpackPwaMAnifest({
             name: "Food Event",
             short_name: "Foodies",
