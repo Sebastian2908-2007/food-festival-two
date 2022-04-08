@@ -16,7 +16,7 @@
       "type": "image/png"
     },
     {
-      "src": "/dist/auto/assets/icons/icon_192x192.png",
+      "src": "/dist/assets/icons/icon_192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
