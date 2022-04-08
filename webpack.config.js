@@ -2,6 +2,7 @@
 const path = require('path');
 const  webpack  = require('webpack');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const webpackPwaMAnifest = require("webpack-pwa-manifest");
 
 // export configuration object note: as of webpack 4 this is no longer neccissary... but im gonna do it anyway
 module.exports = {
@@ -57,6 +58,21 @@ module.exports = {
         }),
         new BundleAnalyzerPlugin({
             analyzerMode: "static", //the report outputs to an HTML file in the dist folder
+        }),
+        new webpackPwaMAnifest({
+            name: "Food Event",
+            short_name: "Foodies",
+            description: "An App that allows you to view upcoming food events.",
+            start_url: "../index.html",
+            background_color: "#01579b",
+            theme_color: "#ffffff",
+            fingerprints: false,
+            inject: false,
+            icons: [{
+                src: path.resolve("assets/img/icons/icon-512x512.png"),
+                size: [96, 128, 192, 256, 384,512],
+                destination: path.join("assets","icons")
+            }]
         })
     ],
     // this will run in production by default
